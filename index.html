@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SingerJS | Simple chord highlighter.</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="singerjs.css">
+    <link rel="stylesheet" href="vendor/prism.css">
+    <link rel="stylesheet" href="vendor/prism-okaidia.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="vendor/svg4everybody.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    
+</head>
+<body>
+
+<div class="start-view">
+    <header class="header">
+        <figure class="header_logo">
+            <img src="images/logo.svg" class="header_logo_pic" alt="">
+        </figure>
+
+        <div class="header_description">Simple chord highlighter.</div>
+
+        <nav class="header_navigation" id="header_navigation">
+            <ul>
+                <li class="header_navigation_item" data-scroll="about">
+                    <a href="#about">
+                        <div class="header_navigation_btn shadow header_navigation_btn-about">
+                            <svg class="icon-info">
+                                <use xlink:href="images/icon-defs.svg#icon-info"/>
+                            </svg>
+                        </div>
+                        <span class="header_navigation_label">About</span>
+                    </a>
+                </li>
+
+                <li class="header_navigation_item" data-scroll="demo">
+                    <a href="#demo">
+                        <div class="header_navigation_btn shadow header_navigation_btn-demo">
+                            <svg class="icon-magnifying-glass">
+                                <use xlink:href="images/icon-defs.svg#icon-magnifying-glass"/>
+                            </svg>
+                        </div>
+                        <span class="header_navigation_label">Demo</span>
+                    </a>
+                </li>
+
+                <li class="header_navigation_item" data-scroll="usage">
+                    <a href="#usage">
+                        <div class="header_navigation_btn shadow header_navigation_btn-usage">
+                            <span>&lt;&#47;&gt;</span>
+                        </div>
+                        <span class="header_navigation_label">Usage</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<div class="content">
+    <section class="content_section" id="content_section_about">
+        <h1 class="content_section_heading content_anchor" id="about"><a href="#about" name="about">About</a></h1>
+        <p class="content_section_text">SingerJS makes songs on your webpage more beautiful and elegant.</p>
+
+        <p class="content_section_text">Ideally, the song has a title, an author and a text with chords. Here is a style SingerJS works with:
+
+        <ul>
+            <li>the title (if it exists) is written on the first line</li>
+            <li>the name of author (also optional) is on the second line just after the title</li>
+            <li>the author comes only with the title</li>
+            <li>there is a blank line between the author and text</li>
+            <li>chords are always written on the separate line</li>
+        </ul>
+        </p>
+    </section>
+
+    <section class="content_section">
+        <h1 class="content_section_heading content_anchor" id="demo"><a href="#demo" name="demo">Demo</a></h1>
+
+        <div id="demo_song-list"></div>
+
+        <pre class="singer_song" id="demo_song"></pre>
+    </section>
+
+    <section class="content_section">
+        <h1 class="content_section_heading content_anchor" id="usage"><a href="#usage" name="usage">Usage</a></h1>
+
+        <p class="content_section_text">Songs are displayed using monospace font in order to keep chords in the same position as they were written, thus it's better to create the song in a text editor which also uses a monospace font (e.g. textEdit in MacOS or Notepad in Windows).</p>
+
+        <p class="content_section_text">Include SingerJS styles in <span class="token tag"></span>head section of your page:</p>
+
+        <pre><code class="language-markup">&lt;link href="singerjs.css" rel="stylesheet" /></code></pre>
+        <pre data-src="singerjs.css"></pre>
+
+        <p class="content_section_text">Include SingerJS script just before the end of body section:</p>
+
+        <pre><code class="language-markup">&lt;script src="singer.js">&lt;/script></code></pre>
+
+
+        <pre data-src="singer.js"></pre>
+    </section>
+
+    <footer class="footer">
+        <div class="footer_copyright">© 2015 Sergei Kriger | <a href="https://github.com/singerjs/singerjs.github.io">Github</a></div>
+        <div class="footer_credits">Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+        <div>Happy playing ♫</div>
+    </footer>
+</div>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60732784-4', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="scripts/script.js"></script>
+<script src="vendor/prism.js"></script>
+<script src="singer.js"></script>
+</body>
+</html>
