@@ -6,7 +6,7 @@
 function Singer (song) {
     "use strict";
 
-    var notChordsFilter = (/[I-Z]|[А-Я]|[а-я]|c|[e-h]|k|l|[n-r]|t|[v-z]|'|\.|\?|!|:|;|\-|\(|\)/g);
+    var notChordsFilter = (/[I-Z]|[А-Я]|[а-я]|c|[e-h]|k|l|[n-r]|t|[v-z]|'|\.|\?|!|:|;|\-/g);
     var coloredSong = "";
 
     this.init = function () {
